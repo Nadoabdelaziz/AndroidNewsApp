@@ -1,0 +1,102 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.firebase.crashlytics'
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.way2news.app"
+        minSdkVersion 22
+        targetSdkVersion 32
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+//    implementation project(path: ':library')
+
+    //noinspection GradleCompatible
+
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'org.jetbrains:annotations-java5:15.0'
+
+//    volly
+    implementation 'com.android.volley:volley:1.1.1'
+    implementation 'com.google.code.gson:gson:2.4'
+
+//    sqlite
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+
+//    networking
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+
+//    ads
+    implementation 'com.google.android.gms:play-services-ads:19.0.0'
+
+//    youtube player
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:8.0.1'
+
+//    firebase language detection
+    implementation 'com.google.firebase:firebase-ml-natural-language:22.0.0'
+    implementation 'com.google.firebase:firebase-ml-natural-language-language-id-model:20.0.7'
+
+//    firebase messaging
+    implementation 'com.google.firebase:firebase-messaging:20.1.2'
+    implementation 'com.google.firebase:firebase-core:17.2.3'
+
+//    material
+    implementation 'com.google.android.material:material:1.1.0'
+
+//    facebook audience
+    implementation 'com.facebook.android:audience-network-sdk:5.7.0'
+
+//    google analytics
+    implementation 'com.google.firebase:firebase-analytics:17.2.3'
+
+//    crashlytics
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0-beta01'
+
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+
+//  viewpager 2
+    implementation 'androidx.viewpager2:viewpager2:1.0.0-alpha01'
+
+    implementation 'com.wajahatkarim3.easyflipviewpager:easyflipviewpager:2.0.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.android.support:multidex:2.0.1' //enter the latest multidex version
+
+    //implementation 'com.wajahatkarim:easyflipviewpager:2.0.1'
+
+}
+
+apply plugin: 'com.google.gms.google-services'

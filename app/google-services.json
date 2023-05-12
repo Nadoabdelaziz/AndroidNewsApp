@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "384426175109",
+    "firebase_url": "https://short-news-1dc60.firebaseio.com",
+    "project_id": "short-news-1dc60",
+    "storage_bucket": "short-news-1dc60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384426175109:android:b5dfcff97d22336dbbd7ec",
+        "android_client_info": {
+          "package_name": "com.way2news.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "384426175109-d6ok215c6kandhte6hpq8bd10ck2t432.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2OaQy8a2bpn2gOJBEJxGF59M-QaJL1oU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "384426175109-d6ok215c6kandhte6hpq8bd10ck2t432.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

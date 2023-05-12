@@ -1,0 +1,45 @@
+<resources>
+
+    <!--  App name -->
+    <string name="app_name">soildersofcross</string>
+
+    <!--  Splash name and sub-title -->
+    <string name="splash_title">Soildersofcross</string>
+    <string name="splash_subtitle">Fast way of getting update</string>
+
+    <!--  Server API URL -->
+    <string name="server_url">https://soildersofcross.com/admin/</string>
+
+    <!--  App sharing content -->
+    <string name="sharing_text">App Share Text Detail</string>
+
+    <!--  More app developer account name -->
+    <string name="more_apps">SoildersofcrossMoreApps</string>
+
+    <!--  Button Play visibility -->
+    <string name="tts_visibility">yes</string>
+
+    <!-- Not TO DO: Do not Remove or change this-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawer_open">drawer_opne</string>
+    <string name="drawer_close">drawer_close</string>
+
+    <string name="lbl_set_profile_photo">Set profile image</string>
+    <string name="lbl_take_camera_picture">Take a picture</string>
+    <string name="lbl_choose_from_gallery">Choose from gallery</string>
+    <string name="toast_image_intent_null">Image picker option is missing!</string>
+    <string name="ad_attribution">Ad</string>
+
+    <string-array name="onbording_title">
+        <item>Stay Updated</item>
+        <item>Swipe Right</item>
+        <item>Share Articles</item>
+    </string-array>
+
+    <string-array name="onbording_desc">
+        <item>Keep yourself updated with the latest happenings in the technology world</item>
+        <item>Swipe right to read the complete article</item>
+        <item>Share what you like with your friends </item>
+    </string-array>
+
+</resources>
