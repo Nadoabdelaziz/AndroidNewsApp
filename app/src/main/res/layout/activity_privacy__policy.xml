@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/darkDray"
     android:orientation="vertical"
-    tools:context="com.way2news.app.Activity.Privacy_Policy">
+    tools:context="com.soildersofcross.app.Activity.Privacy_Policy">
 
     <RelativeLayout
         android:layout_width="match_parent"

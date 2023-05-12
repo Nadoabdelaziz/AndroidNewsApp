@@ -4,7 +4,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.way2news.app"
+        applicationId "com.soildersofcross.app"
         minSdkVersion 22
         targetSdkVersion 32
         versionCode 1

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.way2news.app">
+    package="com.soildersofcross.app">
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -24,7 +24,7 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:requestLegacyExternalStorage="true"
@@ -32,36 +32,36 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".Activity.QuizActivity"
+            android:name="com.soildersofcross.app.Activity.QuizActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.Tiktok"
+            android:name="com.soildersofcross.app.Activity.Tiktok"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Activity.IntroActivity" />
-        <activity android:name=".Activity.ProfileActivity" />
-        <activity android:name=".Activity.UserRegistrationActivity" />
-        <activity android:name=".Activity.LoginActivity" />
-        <activity android:name=".Activity.CommentActivity" />
-        <activity android:name=".Activity.ReferenceActivity" />
-        <activity android:name=".Activity.FullImageActivity" />
-        <activity android:name=".Activity.CategoriesActivity" />
-        <activity android:name=".Activity.Search_Activity" />
-        <activity android:name=".Activity.About_Us" />
-        <activity android:name=".Activity.Privacy_Policy" />
-        <activity android:name=".Activity.VideoPlayer_Activity" /> <!-- <activity android:name=".Activity.ImagePickerActivity" /> -->
+        <activity android:name="com.soildersofcross.app.Activity.IntroActivity" />
+        <activity android:name="com.soildersofcross.app.Activity.ProfileActivity" />
+        <activity android:name="com.soildersofcross.app.Activity.UserRegistrationActivity" />
+        <activity android:name="com.soildersofcross.app.Activity.LoginActivity" />
+        <activity android:name="com.soildersofcross.app.Activity.CommentActivity" />
+        <activity android:name="com.soildersofcross.app.Activity.ReferenceActivity" />
+        <activity android:name="com.soildersofcross.app.Activity.FullImageActivity" />
+        <activity android:name="com.soildersofcross.app.Activity.CategoriesActivity" />
+        <activity android:name="com.soildersofcross.app.Activity.Search_Activity" />
+        <activity android:name="com.soildersofcross.app.Activity.About_Us" />
+        <activity android:name="com.soildersofcross.app.Activity.Privacy_Policy" />
+        <activity android:name="com.soildersofcross.app.Activity.VideoPlayer_Activity" /> <!-- <activity android:name=".Activity.ImagePickerActivity" /> -->
         <activity
-            android:name=".Activity.Detail_Activity"
+            android:name="com.soildersofcross.app.Activity.Detail_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.Loading_Activity"
+            android:name="com.soildersofcross.app.Activity.Loading_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.MainActivity"
+            android:name="com.soildersofcross.app.Activity.MainActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Activity.SplashScreen_Activity"
+            android:name="com.soildersofcross.app.Activity.SplashScreen_Activity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -73,7 +73,7 @@
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/app_icon" />
+            android:resource="@drawable/logo" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/black" />
@@ -83,7 +83,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.way2news.app.fileprovider"
+            android:authorities="com.soildersofcross.app.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true"
             tools:replace="android:authorities">
@@ -94,7 +94,7 @@
         </provider>
 
         <service
-            android:name="com.way2news.app.utils.MyFirebaseMessagingService"
+            android:name="com.soildersofcross.app.utils.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
