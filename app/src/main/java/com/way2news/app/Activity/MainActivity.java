@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout lay_bookmark, lay_cat, lay_setting, lay_share, lay_rate, lay_otherApp;
     private LinearLayout lay_privacy, lay_aboutUs, layMenuHeader, lay_latestNews, layBG, ll_ads;
     private ImageView img_drawer, img_search, img_pin, imgLatest, imgCategory, imgBookmarkmenu, imgSetting, imgShareApp, imgRateApp, imgOtherApp, imgPrivacy, imgAboutUs;
-    private TextView txtLatest, txtCategory, txtBookmark, txtSetting, txtShareApp;
+    private TextView txtLatest, txtCategory, txtBookmark, txtSetting, txtShareApp,txtQuiz;
     private TextView txtRateApp, txtOtherApp, txtPrivacy, txtAboutUs, txtMenu;
     private String newsid, title, message, image;
     public static String isSearch = "";
@@ -153,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
                 txtOtherApp.setTextColor(getResources().getColor(R.color.white));
                 txtPrivacy.setTextColor(getResources().getColor(R.color.white));
                 txtAboutUs.setTextColor(getResources().getColor(R.color.white));
+                txtQuiz.setTextColor(getResources().getColor(R.color.white));
+
             }
             if (themeKEY.equals("0")) {
                 lay_drawer.setBackgroundColor(getResources().getColor(R.color.yellow));
@@ -468,6 +470,8 @@ public class MainActivity extends AppCompatActivity {
         txtOtherApp = findViewById(R.id.txtOtherApp);
         txtPrivacy = findViewById(R.id.txtPrivacy);
         txtAboutUs = findViewById(R.id.txtAboutUs);
+        txtQuiz = findViewById(R.id.txtQuiz);
+
 
         ll_ads = findViewById(R.id.ll_ads);
         relay_adview = findViewById(R.id.relay_adview);
@@ -488,6 +492,15 @@ public class MainActivity extends AppCompatActivity {
                 } catch(Exception e) {
                     //e.toString();
                 }
+            }
+        });
+
+        txtQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,QuizActivity.class);
+                startActivity(intent);
+
             }
         });
 

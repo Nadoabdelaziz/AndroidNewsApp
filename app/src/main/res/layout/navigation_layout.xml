@@ -131,7 +131,20 @@
                 android:layout_width="28dp"
                 android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/ic_setting" />
+                android:src="@drawable/questt" />
+
+
+
+            <TextView
+                android:id="@+id/txtQuiz"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/cerebrisans_regular"
+                android:gravity="center_vertical"
+                android:text="Quiz"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/txtSetting"

@@ -32,33 +32,36 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.way2news.app.Activity.Tiktok"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            android:exported="true" />
-        <activity android:name="com.way2news.app.Activity.IntroActivity" />
-        <activity android:name="com.way2news.app.Activity.ProfileActivity" />
-        <activity android:name="com.way2news.app.Activity.UserRegistrationActivity" />
-        <activity android:name="com.way2news.app.Activity.LoginActivity" />
-        <activity android:name="com.way2news.app.Activity.CommentActivity" />
-        <activity android:name="com.way2news.app.Activity.ReferenceActivity" />
-        <activity android:name="com.way2news.app.Activity.FullImageActivity" />
-        <activity android:name="com.way2news.app.Activity.CategoriesActivity" />
-        <activity android:name="com.way2news.app.Activity.Search_Activity" />
-        <activity android:name="com.way2news.app.Activity.About_Us" />
-        <activity android:name="com.way2news.app.Activity.Privacy_Policy" />
-        <activity android:name="com.way2news.app.Activity.VideoPlayer_Activity" /> <!-- <activity android:name=".Activity.ImagePickerActivity" /> -->
+            android:name=".Activity.QuizActivity"
+            android:exported="false" />
         <activity
-            android:name="com.way2news.app.Activity.Detail_Activity"
+            android:name=".Activity.Tiktok"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Activity.IntroActivity" />
+        <activity android:name=".Activity.ProfileActivity" />
+        <activity android:name=".Activity.UserRegistrationActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.CommentActivity" />
+        <activity android:name=".Activity.ReferenceActivity" />
+        <activity android:name=".Activity.FullImageActivity" />
+        <activity android:name=".Activity.CategoriesActivity" />
+        <activity android:name=".Activity.Search_Activity" />
+        <activity android:name=".Activity.About_Us" />
+        <activity android:name=".Activity.Privacy_Policy" />
+        <activity android:name=".Activity.VideoPlayer_Activity" /> <!-- <activity android:name=".Activity.ImagePickerActivity" /> -->
+        <activity
+            android:name=".Activity.Detail_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.way2news.app.Activity.Loading_Activity"
+            android:name=".Activity.Loading_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.way2news.app.Activity.MainActivity"
+            android:name=".Activity.MainActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.way2news.app.Activity.SplashScreen_Activity"
+            android:name=".Activity.SplashScreen_Activity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
