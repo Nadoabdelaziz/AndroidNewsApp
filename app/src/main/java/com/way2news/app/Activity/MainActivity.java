@@ -39,6 +39,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import com.way2news.app.BuildConfig;
 import com.way2news.app.Fragment.Bookmark_Fragment;
 import com.way2news.app.Fragment.CatListFragment;
 import com.way2news.app.Fragment.MainFragment;
@@ -484,9 +485,9 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     Intent shareIntent = new Intent(Intent.ACTION_SEND);
                     shareIntent.setType("text/plain");
-                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Way2News");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "SoildersOfCross");
                     String shareMessage= "\nLet me recommend you this application\n\n";
-                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=sun.way2sms.hyd.com"+"\n\n";
+                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id="+ BuildConfig.APPLICATION_ID+"\n\n";
                     shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                     startActivity(Intent.createChooser(shareIntent, "choose one"));
                 } catch(Exception e) {
