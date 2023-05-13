@@ -3,13 +3,16 @@ package com.soildersofcross.app.Activity;
 import android.app.Dialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
+import android.preference.PreferenceManager;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.Gravity;
@@ -39,11 +42,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.soildersofcross.app.BuildConfig;
 import com.soildersofcross.app.Fragment.Bookmark_Fragment;
 import com.soildersofcross.app.Fragment.CatListFragment;
 import com.soildersofcross.app.Fragment.MainFragment;
 import com.soildersofcross.app.Fragment.SettingFragment;
+import com.soildersofcross.app.Model_Class.Question;
 import com.soildersofcross.app.R;
 import com.soildersofcross.app.utils.SPmanager;
 
@@ -64,6 +70,11 @@ import com.google.firebase.iid.InstanceIdResult;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String CHANNEL_ID = "123";
@@ -82,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout lay_bookmark, lay_cat, lay_setting, lay_share, lay_rate, lay_otherApp;
     private LinearLayout lay_privacy, lay_aboutUs, layMenuHeader, lay_latestNews, layBG, ll_ads;
     private ImageView img_drawer, img_search, img_pin, imgLatest, imgCategory, imgBookmarkmenu, imgSetting, imgShareApp, imgRateApp, imgOtherApp, imgPrivacy, imgAboutUs;
-    private TextView txtLatest, txtCategory, txtBookmark, txtSetting, txtShareApp,txtQuiz;
+    private TextView txtLatest, txtCategory, txtBookmark, txtSetting, txtShareApp,txtQuiz,txtaddquiz;
     private TextView txtRateApp, txtOtherApp, txtPrivacy, txtAboutUs, txtMenu;
     private String newsid, title, message, image;
     public static String isSearch = "";
@@ -155,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
                 txtPrivacy.setTextColor(getResources().getColor(R.color.white));
                 txtAboutUs.setTextColor(getResources().getColor(R.color.white));
                 txtQuiz.setTextColor(getResources().getColor(R.color.white));
+                txtaddquiz.setTextColor(getResources().getColor(R.color.white));
 
             }
             if (themeKEY.equals("0")) {
@@ -472,6 +484,7 @@ public class MainActivity extends AppCompatActivity {
         txtPrivacy = findViewById(R.id.txtPrivacy);
         txtAboutUs = findViewById(R.id.txtAboutUs);
         txtQuiz = findViewById(R.id.txtQuiz);
+        txtaddquiz = findViewById(R.id.txtaddquiz);
 
 
         ll_ads = findViewById(R.id.ll_ads);
@@ -501,6 +514,54 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,QuizActivity.class);
                 startActivity(intent);
+
+            }
+        });
+
+
+        txtaddquiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this,AddQuestionActivity.class);
+                startActivity(intent);
+//                List<Question> Questions = new ArrayList<Question>();
+//
+//                List<String> theChoices = new ArrayList<String>();
+//                theChoices.add("42.195 kilometres");
+//                theChoices.add("32.395 kilometres");
+//                theChoices.add("54.125 kilometres");
+//                theChoices.add("66.495 kilometres");
+//                Question q1 = new Question("How long is a marathon?", theChoices, "42.195 kilometres");
+//                Questions.add(q1);
+//
+//
+//
+//                    List<Question> arrayItems;
+//                    SharedPreferences sharedPreferences = MainActivity.this.getSharedPreferences("Question", Context.MODE_PRIVATE);
+//                    String serializedObject = sharedPreferences.getString("Questions", null);
+//                    if (serializedObject != null) {
+//                        Gson gson = new Gson();
+//                        Type type = new TypeToken<List<Question>>() {
+//                        }.getType();
+//                        arrayItems = gson.fromJson(serializedObject, type);
+//
+//
+//                    }
+//
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    Gson gson = new Gson();
+//                    String json = gson.toJson(Questions);
+//                    editor.putString("Questions", json);
+//                    editor.commit();
+//                    Log.d("HERE", "onClick: "+json);
+
+//                SharedPreferences sharedPreferences = MainActivity.this.getSharedPreferences("Questions", 0);
+//                SharedPreferences.Editor sharedPreferencesEditor = sharedPreferences.edit();
+//                final Gson gson = new Gson();
+//                String serializedObject = gson.toJson(q1);
+//                sharedPreferencesEditor.putString("question", serializedObject);
+//                sharedPreferencesEditor.apply();
 
             }
         });

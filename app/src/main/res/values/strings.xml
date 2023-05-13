@@ -4,7 +4,7 @@
     <string name="app_name">soildersofcross</string>
 
     <!--  Splash name and sub-title -->
-        <string name="splash_title">Soildersofcross</string>
+    <string name="splash_title">Soildersofcross</string>
     <string name="splash_subtitle">Fast way of getting update</string>
 
     <!--  Server API URL -->

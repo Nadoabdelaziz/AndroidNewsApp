@@ -32,36 +32,39 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.soildersofcross.app.Activity.QuizActivity"
+            android:name=".Activity.AddQuestionActivity"
             android:exported="false" />
         <activity
-            android:name="com.soildersofcross.app.Activity.Tiktok"
+            android:name=".Activity.QuizActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Tiktok"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name="com.soildersofcross.app.Activity.IntroActivity" />
-        <activity android:name="com.soildersofcross.app.Activity.ProfileActivity" />
-        <activity android:name="com.soildersofcross.app.Activity.UserRegistrationActivity" />
-        <activity android:name="com.soildersofcross.app.Activity.LoginActivity" />
-        <activity android:name="com.soildersofcross.app.Activity.CommentActivity" />
-        <activity android:name="com.soildersofcross.app.Activity.ReferenceActivity" />
-        <activity android:name="com.soildersofcross.app.Activity.FullImageActivity" />
-        <activity android:name="com.soildersofcross.app.Activity.CategoriesActivity" />
-        <activity android:name="com.soildersofcross.app.Activity.Search_Activity" />
-        <activity android:name="com.soildersofcross.app.Activity.About_Us" />
-        <activity android:name="com.soildersofcross.app.Activity.Privacy_Policy" />
-        <activity android:name="com.soildersofcross.app.Activity.VideoPlayer_Activity" /> <!-- <activity android:name=".Activity.ImagePickerActivity" /> -->
+        <activity android:name=".Activity.IntroActivity" />
+        <activity android:name=".Activity.ProfileActivity" />
+        <activity android:name=".Activity.UserRegistrationActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.CommentActivity" />
+        <activity android:name=".Activity.ReferenceActivity" />
+        <activity android:name=".Activity.FullImageActivity" />
+        <activity android:name=".Activity.CategoriesActivity" />
+        <activity android:name=".Activity.Search_Activity" />
+        <activity android:name=".Activity.About_Us" />
+        <activity android:name=".Activity.Privacy_Policy" />
+        <activity android:name=".Activity.VideoPlayer_Activity" /> <!-- <activity android:name=".Activity.ImagePickerActivity" /> -->
         <activity
-            android:name="com.soildersofcross.app.Activity.Detail_Activity"
+            android:name=".Activity.Detail_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.soildersofcross.app.Activity.Loading_Activity"
+            android:name=".Activity.Loading_Activity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.soildersofcross.app.Activity.MainActivity"
+            android:name=".Activity.MainActivity"
             android:hardwareAccelerated="true"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.soildersofcross.app.Activity.SplashScreen_Activity"
+            android:name=".Activity.SplashScreen_Activity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
