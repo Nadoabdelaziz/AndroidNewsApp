@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     private RelativeLayout relay_drawer, relBottom, lay_container, relay_adview;
     private LinearLayout lay_bookmark, lay_cat, lay_setting, lay_share, lay_rate, lay_otherApp;
     private LinearLayout lay_privacy, lay_aboutUs, layMenuHeader, lay_latestNews, layBG, ll_ads;
-    private ImageView img_drawer, img_search, img_pin, imgLatest, imgCategory, imgBookmarkmenu, imgSetting, imgShareApp, imgRateApp, imgOtherApp, imgPrivacy, imgAboutUs;
+    private ImageView img_drawer, img_search, img_pin, imgLatest, imgCategory, imgBookmarkmenu, imgSetting, imgShareApp, imgRateApp, imgOtherApp, imgPrivacy, imgAboutUs,imgaddquiz;
     private TextView txtLatest, txtCategory, txtBookmark, txtSetting, txtShareApp,txtQuiz,txtaddquiz;
     private TextView txtRateApp, txtOtherApp, txtPrivacy, txtAboutUs, txtMenu;
     private String newsid, title, message, image;
@@ -191,6 +191,9 @@ public class MainActivity extends AppCompatActivity {
                 imgOtherApp.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
                 imgPrivacy.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
                 imgAboutUs.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
+                imgaddquiz.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
+
+
             }
 
         } else {
@@ -215,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
             imgOtherApp.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
             imgPrivacy.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
             imgAboutUs.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
+            imgaddquiz.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
 
         }
         Fragment fragment = new MainFragment();
@@ -473,6 +477,7 @@ public class MainActivity extends AppCompatActivity {
         imgOtherApp = findViewById(R.id.imgOtherApp);
         imgPrivacy = findViewById(R.id.imgPrivacy);
         imgAboutUs = findViewById(R.id.imgAboutUs);
+        imgaddquiz = findViewById(R.id.imgaddquiz);
 
         txtLatest = findViewById(R.id.txtLatest);
         txtCategory = findViewById(R.id.txtCategory);

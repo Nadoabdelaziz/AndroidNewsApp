@@ -265,7 +265,7 @@
                 android:layout_marginLeft="15dp"
                 android:fontFamily="@font/cerebrisans_regular"
                 android:gravity="center_vertical"
-                android:text="Add Questions"
+                android:text="Quiz Questions"
                 android:textColor="@color/white"
                 android:textSize="15sp" />
         </LinearLayout>

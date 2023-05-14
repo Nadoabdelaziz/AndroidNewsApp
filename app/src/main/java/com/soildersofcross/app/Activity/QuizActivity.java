@@ -315,7 +315,7 @@ public class QuizActivity extends AppCompatActivity {
                     if(j[0]+1 <= n && j[0] > 0) {
                         j[0]--;
                     }
-                    Log.d("HERE", "onClick: "+j[0]);
+                    Log.d("HERE", " onClick: "+j[0]);
                     if(j[0] <=n){
                         Q.setText(arrayItems.get(j[0]).getTitle());
                         c1.setText(arrayItems.get(j[0]).getChoices().get(0));
