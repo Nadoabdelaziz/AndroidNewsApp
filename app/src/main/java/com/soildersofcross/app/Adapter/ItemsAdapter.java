@@ -107,28 +107,28 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
             }*/
 
 
-                    if (activity.getString(R.string.tts_visibility).equals("yes")) {
-                        holder.lay_btnplay.setVisibility(View.VISIBLE);
-                        if (MainActivity.themeKEY != null) {
-                            if (MainActivity.themeKEY.equals("1")) {
-
-//                    btn_pause.setVisibility(View.VISIBLE);
-                                holder.btn_play.setVisibility(View.VISIBLE);
-                                holder.btn_play.setColorFilter(ContextCompat.getColor(activity, R.color.darkDray), android.graphics.PorterDuff.Mode.MULTIPLY);
-
-                            } else if (MainActivity.themeKEY.equals("0")) {
-//                    btn_pause.setVisibility(View.VISIBLE);
-                                holder.btn_play.setVisibility(View.VISIBLE);
-                                holder.btn_play.setColorFilter(ContextCompat.getColor(activity, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
-                            }
-                        } else {
-//                btn_pause.setVisibility(View.VISIBLE);
-                            holder.btn_play.setVisibility(View.VISIBLE);
-                            holder.btn_play.setColorFilter(ContextCompat.getColor(activity, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
-                        }
-                    } else {
-                        holder.lay_btnplay.setVisibility(View.GONE);
-                    }
+//                    if (activity.getString(R.string.tts_visibility).equals("yes")) {
+//                        holder.lay_btnplay.setVisibility(View.VISIBLE);
+//                        if (MainActivity.themeKEY != null) {
+//                            if (MainActivity.themeKEY.equals("1")) {
+//
+////                    btn_pause.setVisibility(View.VISIBLE);
+//                                holder.btn_play.setVisibility(View.VISIBLE);
+//                                holder.btn_play.setColorFilter(ContextCompat.getColor(activity, R.color.darkDray), android.graphics.PorterDuff.Mode.MULTIPLY);
+//
+//                            } else if (MainActivity.themeKEY.equals("0")) {
+////                    btn_pause.setVisibility(View.VISIBLE);
+//                                holder.btn_play.setVisibility(View.VISIBLE);
+//                                holder.btn_play.setColorFilter(ContextCompat.getColor(activity, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
+//                            }
+//                        } else {
+////                btn_pause.setVisibility(View.VISIBLE);
+//                            holder.btn_play.setVisibility(View.VISIBLE);
+//                            holder.btn_play.setColorFilter(ContextCompat.getColor(activity, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
+//                        }
+//                    } else {
+//                        holder.lay_btnplay.setVisibility(View.GONE);
+//                    }
 
                     supportLan(menuGetset.getDescription(),holder);
 
@@ -401,7 +401,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
                         @Override
                         public void onClick(View view) {
 
-                            holder.btn_play.setVisibility(View.VISIBLE);
+                            //holder.btn_play.setVisibility(View.VISIBLE);
                             holder.btn_pause.setVisibility(View.INVISIBLE);
                             tts.stop();
 
@@ -531,7 +531,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
                                 if (languageCode != "und") {
 
                                     if (Arrays.asList(codelist).contains(languageCode)) {
-                                        holder.btn_play.setVisibility(View.VISIBLE);
+                                        //holder.btn_play.setVisibility(View.VISIBLE);
                                     } else {
                                         holder.btn_play.setVisibility(View.INVISIBLE);
 //                                        btn_pause.setVisibility(View.INVISIBLE);
@@ -672,7 +672,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ViewHolder> 
                     @Override
                     public void run() {
                         holder.btn_pause.setVisibility(View.GONE);
-                        holder.btn_play.setVisibility(View.VISIBLE);
+                        //holder.btn_play.setVisibility(View.VISIBLE);
                     }
                 });
             }
