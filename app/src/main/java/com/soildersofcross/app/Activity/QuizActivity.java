@@ -183,6 +183,10 @@ public class QuizActivity extends AppCompatActivity {
             nextbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    c1.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                    c2.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                    c3.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                    c4.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
                     if(j[0]+1 < n) {
                         j[0]++;
                     }
@@ -312,6 +316,10 @@ public class QuizActivity extends AppCompatActivity {
             backbtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    c1.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                    c2.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                    c3.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+                    c4.setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
                     if(j[0]+1 <= n && j[0] > 0) {
                         j[0]--;
                     }

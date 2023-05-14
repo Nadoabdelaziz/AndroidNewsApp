@@ -541,7 +541,7 @@ public class MagazineActivity extends AppCompatActivity {
                                 String reference = jsonObject1.getString("reference");
                                 String shortname = jsonObject1.getString("shortname");
 
-                                if (is_image.equals("1")) 
+                                if (is_image.equals("1"))
                                 {
                                     model_class.setId1(id);
                                 model_class.setCat_id(cat_id);
