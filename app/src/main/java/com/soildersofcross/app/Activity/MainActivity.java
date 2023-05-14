@@ -49,6 +49,7 @@ import com.soildersofcross.app.Fragment.Bookmark_Fragment;
 import com.soildersofcross.app.Fragment.CatListFragment;
 import com.soildersofcross.app.Fragment.MainFragment;
 import com.soildersofcross.app.Fragment.SettingFragment;
+import com.soildersofcross.app.MagazineActivity;
 import com.soildersofcross.app.Model_Class.Question;
 import com.soildersofcross.app.R;
 import com.soildersofcross.app.utils.SPmanager;
@@ -90,9 +91,9 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAnalytics mFirebaseAnalytics;
     public static String themeKEY;
     private RelativeLayout relay_drawer, relBottom, lay_container, relay_adview;
-    private LinearLayout lay_bookmark, lay_cat, lay_setting, lay_share, lay_rate, lay_otherApp;
-    private LinearLayout lay_privacy, lay_aboutUs, layMenuHeader, lay_latestNews, layBG, ll_ads;
-    private ImageView img_drawer, img_search, img_pin, imgLatest, imgCategory, imgBookmarkmenu, imgSetting, imgShareApp, imgRateApp, imgOtherApp, imgPrivacy, imgAboutUs,imgaddquiz;
+    private LinearLayout lay_bookmark, lay_cat, lay_setting, lay_share, lay_rate, lay_otherApp,lay_Magazine;
+    private LinearLayout lay_privacy, lay_aboutUs, layMenuHeader, lay_latestNews, layBG, ll_ads,lay_Quiz,lay_AddQuiz;
+    private ImageView img_drawer, img_search, img_pin, imgLatest, imgCategory, imgBookmarkmenu, imgSetting, imgShareApp, imgRateApp, imgOtherApp, imgPrivacy, imgAboutUs,imgquiz,imgmagazine,imgaddquiz;
     private TextView txtLatest, txtCategory, txtBookmark, txtSetting, txtShareApp,txtQuiz,txtaddquiz;
     private TextView txtRateApp, txtOtherApp, txtPrivacy, txtAboutUs, txtMenu;
     private String newsid, title, message, image;
@@ -192,6 +193,8 @@ public class MainActivity extends AppCompatActivity {
                 imgPrivacy.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
                 imgAboutUs.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
                 imgaddquiz.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
+                imgquiz.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
+                imgmagazine.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
 
 
             }
@@ -219,6 +222,8 @@ public class MainActivity extends AppCompatActivity {
             imgPrivacy.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
             imgAboutUs.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
             imgaddquiz.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
+            imgquiz.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
+            imgmagazine.setColorFilter(ContextCompat.getColor(this, R.color.yellow), android.graphics.PorterDuff.Mode.MULTIPLY);
 
         }
         Fragment fragment = new MainFragment();
@@ -457,6 +462,11 @@ public class MainActivity extends AppCompatActivity {
         lay_bookmark = findViewById(R.id.lay_bookmark);
         lay_cat = findViewById(R.id.lay_cat);
         lay_setting = findViewById(R.id.lay_setting);
+        lay_Quiz = findViewById(R.id.lay_Quiz);
+        lay_AddQuiz = findViewById(R.id.lay_addquiz);
+        lay_Magazine = findViewById(R.id.lay_Magazine);
+
+
         lay_share = findViewById(R.id.lay_share);
         lay_rate = findViewById(R.id.lay_rate);
         lay_otherApp = findViewById(R.id.lay_otherApp);
@@ -478,6 +488,8 @@ public class MainActivity extends AppCompatActivity {
         imgPrivacy = findViewById(R.id.imgPrivacy);
         imgAboutUs = findViewById(R.id.imgAboutUs);
         imgaddquiz = findViewById(R.id.imgaddquiz);
+        imgquiz = findViewById(R.id.imgquiz);
+        imgmagazine = findViewById(R.id.imgMagazine);
 
         txtLatest = findViewById(R.id.txtLatest);
         txtCategory = findViewById(R.id.txtCategory);
@@ -514,7 +526,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        txtQuiz.setOnClickListener(new View.OnClickListener() {
+        lay_Quiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,QuizActivity.class);
@@ -524,7 +536,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        txtaddquiz.setOnClickListener(new View.OnClickListener() {
+        lay_AddQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -571,6 +583,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        lay_Magazine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MagazineActivity.class);
+                startActivity(intent);
+            }
+        });
         lay_setting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
